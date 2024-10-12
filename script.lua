@@ -56,13 +56,16 @@ local scripthubf = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
 local IY = Instance.new("TextButton")
 local UNC = Instance.new("TextButton")
+local showBlackBackground = Instance.new("BoolValue")
+local customKeybind = Instance.new("StringValue")
 
 --Properties:
 
 areoVolt.Name = "areoVolt"
-areoVolt.Parent = game.CoreGui
+areoVolt.Parent = game.Players.BTsChickenSandwich.PlayerGui
 areoVolt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 areoVolt.ResetOnSpawn = false
+areoVolt.IgnoreGuiInset = true
 
 background.Name = "background"
 background.Parent = areoVolt
@@ -502,6 +505,14 @@ UNC.TextColor3 = Color3.fromRGB(255, 255, 255)
 UNC.TextScaled = true
 UNC.TextSize = 14.000
 UNC.TextWrapped = true
+
+customKeybind.Name = "customKeybind"
+customKeybind.Value = "Insert"
+customKeybind.Parent = settings
+
+showBlackBackground.Name = "showBlackBackground"
+showBlackBackground.Value = true
+showBlackBackground.Parent = settings
 
 -- Scripts:
 
