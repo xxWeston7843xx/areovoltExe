@@ -1,17 +1,11 @@
-game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "Areovolt V1 Injected.";
-	Text = "Press INSERT To Open The Menu.";
-	Duration = 4.5;
-})
-
-print("Areovolt Injected.")
-print("look behind you")
-print("Made By Batman")
+-- Gui to Lua
+-- Version: 3.2
 
 -- Instances:
 
 local areoVolt = Instance.new("ScreenGui")
 local background = Instance.new("Frame")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local settings = Instance.new("Folder")
 local main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -62,10 +56,9 @@ local customKeybind = Instance.new("StringValue")
 --Properties:
 
 areoVolt.Name = "areoVolt"
-areoVolt.Parent = game.CoreGui
+areoVolt.Parent = game.Workspace.areoVoltFE
 areoVolt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 areoVolt.ResetOnSpawn = false
-areoVolt.IgnoreGuiInset = true
 
 background.Name = "background"
 background.Parent = areoVolt
@@ -73,9 +66,12 @@ background.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 background.BackgroundTransparency = 0.700
 background.BorderColor3 = Color3.fromRGB(0, 0, 0)
 background.BorderSizePixel = 0
-background.Size = UDim2.new(0, 1283, 0, 615)
+background.Size = UDim2.new(0.999844193, 0, 0.999674857, 0)
 background.Visible = false
 background.ZIndex = -1
+
+UIAspectRatioConstraint.Parent = background
+UIAspectRatioConstraint.AspectRatio = 2.086
 
 settings.Name = "settings"
 settings.Parent = areoVolt
@@ -514,9 +510,10 @@ showBlackBackground.Name = "showBlackBackground"
 showBlackBackground.Value = true
 showBlackBackground.Parent = settings
 
+
 -- Scripts:
 
-local function ECEKBY_fake_script() -- areoVolt.guiInterface 
+local function WVFX_fake_script() -- areoVolt.guiInterface 
 	local script = Instance.new('LocalScript', areoVolt)
 
 	local uip = game:GetService("UserInputService")
@@ -585,8 +582,8 @@ local function ECEKBY_fake_script() -- areoVolt.guiInterface
 		end
 	end)
 end
-coroutine.wrap(ECEKBY_fake_script)()
-local function OBVLCZI_fake_script() -- codeBox.LocalScript 
+coroutine.wrap(WVFX_fake_script)()
+local function ZTOGL_fake_script() -- codeBox.LocalScript 
 	local script = Instance.new('LocalScript', codeBox)
 
 	-- Dont change this script or the textbox wont look good anymore
@@ -738,8 +735,8 @@ local function OBVLCZI_fake_script() -- codeBox.LocalScript
 	l__Source__1.Changed:Connect(v5);
 	
 end
-coroutine.wrap(OBVLCZI_fake_script)()
-local function HJIIONY_fake_script() -- execute.LocalScript 
+coroutine.wrap(ZTOGL_fake_script)()
+local function XXQJ_fake_script() -- execute.LocalScript 
 	local script = Instance.new('LocalScript', execute)
 
 	local executeButton = script.Parent
@@ -773,38 +770,38 @@ local function HJIIONY_fake_script() -- execute.LocalScript
 		debounce = false
 	end)
 end
-coroutine.wrap(HJIIONY_fake_script)()
-local function ZPLQ_fake_script() -- clear.LocalScript 
+coroutine.wrap(XXQJ_fake_script)()
+local function UJIIKMW_fake_script() -- clear.LocalScript 
 	local script = Instance.new('LocalScript', clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		_G.codeBox.Text = ""
 	end)
 end
-coroutine.wrap(ZPLQ_fake_script)()
-local function BHOKC_fake_script() -- main.variable 
+coroutine.wrap(UJIIKMW_fake_script)()
+local function AAQDJPB_fake_script() -- main.variable 
 	local script = Instance.new('LocalScript', main)
 
 	_G.codeBox = script.Parent.codeBox.EditorFrame.Source
 end
-coroutine.wrap(BHOKC_fake_script)()
-local function WYBKBEC_fake_script() -- scripthub.LocalScript 
+coroutine.wrap(AAQDJPB_fake_script)()
+local function FTPT_fake_script() -- scripthub.LocalScript 
 	local script = Instance.new('LocalScript', scripthub)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.scripthubf.Visible = true
 	end)
 end
-coroutine.wrap(WYBKBEC_fake_script)()
-local function NTFDWMV_fake_script() -- settings_2.LocalScript 
+coroutine.wrap(FTPT_fake_script)()
+local function VBVK_fake_script() -- settings_2.LocalScript 
 	local script = Instance.new('LocalScript', settings_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.settingsf.Visible = true
 	end)
 end
-coroutine.wrap(NTFDWMV_fake_script)()
-local function HQDIUF_fake_script() -- close.LocalScript 
+coroutine.wrap(VBVK_fake_script)()
+local function UTYNIW_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	local button = script.Parent
@@ -842,15 +839,15 @@ local function HQDIUF_fake_script() -- close.LocalScript
 	end)
 	
 end
-coroutine.wrap(HQDIUF_fake_script)()
-local function EHWRPSO_fake_script() -- settingsf.settingsManager 
+coroutine.wrap(UTYNIW_fake_script)()
+local function GFZJT_fake_script() -- settingsf.settingsManager 
 	local script = Instance.new('LocalScript', settingsf)
 
 	local settingsFolder = script.Parent.Parent.Parent.settings
 	
 end
-coroutine.wrap(EHWRPSO_fake_script)()
-local function CUSE_fake_script() -- main.clip 
+coroutine.wrap(GFZJT_fake_script)()
+local function GJYT_fake_script() -- main.clip 
 	local script = Instance.new('LocalScript', main)
 
 	local mainContent = {
@@ -892,8 +889,8 @@ local function CUSE_fake_script() -- main.clip
 		end
 	end)
 end
-coroutine.wrap(CUSE_fake_script)()
-local function IXOCU_fake_script() -- main.Dragify 
+coroutine.wrap(GJYT_fake_script)()
+local function QLDF_fake_script() -- main.Dragify 
 	local script = Instance.new('LocalScript', main)
 
 	local UIS = game:GetService("UserInputService")
@@ -934,16 +931,16 @@ local function IXOCU_fake_script() -- main.Dragify
 	dragify(script.Parent)
 	
 end
-coroutine.wrap(IXOCU_fake_script)()
-local function LLWWMC_fake_script() -- IY.LocalScript 
+coroutine.wrap(QLDF_fake_script)()
+local function OIQQY_fake_script() -- IY.LocalScript 
 	local script = Instance.new('LocalScript', IY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(LLWWMC_fake_script)()
-local function FTHCTR_fake_script() -- UNC.LocalScript 
+coroutine.wrap(OIQQY_fake_script)()
+local function BZUSAO_fake_script() -- UNC.LocalScript 
 	local script = Instance.new('LocalScript', UNC)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1820,4 +1817,4 @@ local function FTHCTR_fake_script() -- UNC.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(FTHCTR_fake_script)()
+coroutine.wrap(BZUSAO_fake_script)()
