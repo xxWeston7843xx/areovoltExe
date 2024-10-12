@@ -56,7 +56,7 @@ local customKeybind = Instance.new("StringValue")
 --Properties:
 
 areoVolt.Name = "areoVolt"
-areoVolt.Parent = game.Workspace.areoVoltFE
+areoVolt.Parent = game.CoreGui
 areoVolt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 areoVolt.ResetOnSpawn = false
 
