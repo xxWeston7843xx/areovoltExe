@@ -1,6 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
 -- Instances:
 
 local areoVolt = Instance.new("ScreenGui")
@@ -50,6 +47,9 @@ local scripthubf = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
 local IY = Instance.new("TextButton")
 local UNC = Instance.new("TextButton")
+local prizzlife = Instance.new("TextButton")
+local resetC = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
 local showBlackBackground = Instance.new("BoolValue")
 local customKeybind = Instance.new("StringValue")
 
@@ -57,8 +57,8 @@ local customKeybind = Instance.new("StringValue")
 
 areoVolt.Name = "areoVolt"
 areoVolt.Parent = game.CoreGui
-areoVolt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 areoVolt.ResetOnSpawn = false
+areoVolt.IgnoreGuiInsent = true
 
 background.Name = "background"
 background.Parent = areoVolt
@@ -502,6 +502,36 @@ UNC.TextScaled = true
 UNC.TextSize = 14.000
 UNC.TextWrapped = true
 
+prizzlife.Name = "prizzlife"
+prizzlife.Parent = scripthubf
+prizzlife.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+prizzlife.BorderColor3 = Color3.fromRGB(0, 0, 0)
+prizzlife.BorderSizePixel = 0
+prizzlife.Position = UDim2.new(0.0262091924, 0, 0.298657715, 0)
+prizzlife.Size = UDim2.new(0, 144, 0, 27)
+prizzlife.Font = Enum.Font.Sarpanch
+prizzlife.Text = "Prison Life Admin (OP)"
+prizzlife.TextColor3 = Color3.fromRGB(255, 255, 255)
+prizzlife.TextScaled = true
+prizzlife.TextSize = 14.000
+prizzlife.TextWrapped = true
+
+resetC.Name = "resetC"
+resetC.Parent = main
+resetC.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+resetC.BorderColor3 = Color3.fromRGB(0, 0, 0)
+resetC.BorderSizePixel = 0
+resetC.Position = UDim2.new(0.355384618, 0, 0.86996907, 0)
+resetC.Size = UDim2.new(0, 86, 0, 26)
+resetC.Font = Enum.Font.Sarpanch
+resetC.Text = "Reset Character"
+resetC.TextColor3 = Color3.fromRGB(255, 255, 255)
+resetC.TextScaled = true
+resetC.TextSize = 14.000
+resetC.TextWrapped = true
+
+UICorner_12.Parent = resetC
+
 customKeybind.Name = "customKeybind"
 customKeybind.Value = "Insert"
 customKeybind.Parent = settings
@@ -510,10 +540,9 @@ showBlackBackground.Name = "showBlackBackground"
 showBlackBackground.Value = true
 showBlackBackground.Parent = settings
 
-
 -- Scripts:
 
-local function WVFX_fake_script() -- areoVolt.guiInterface 
+local function CKDCR_fake_script() -- areoVolt.guiInterface 
 	local script = Instance.new('LocalScript', areoVolt)
 
 	local uip = game:GetService("UserInputService")
@@ -582,8 +611,8 @@ local function WVFX_fake_script() -- areoVolt.guiInterface
 		end
 	end)
 end
-coroutine.wrap(WVFX_fake_script)()
-local function ZTOGL_fake_script() -- codeBox.LocalScript 
+coroutine.wrap(CKDCR_fake_script)()
+local function ETDWIR_fake_script() -- codeBox.LocalScript 
 	local script = Instance.new('LocalScript', codeBox)
 
 	-- Dont change this script or the textbox wont look good anymore
@@ -735,8 +764,8 @@ local function ZTOGL_fake_script() -- codeBox.LocalScript
 	l__Source__1.Changed:Connect(v5);
 	
 end
-coroutine.wrap(ZTOGL_fake_script)()
-local function XXQJ_fake_script() -- execute.LocalScript 
+coroutine.wrap(ETDWIR_fake_script)()
+local function OHTYB_fake_script() -- execute.LocalScript 
 	local script = Instance.new('LocalScript', execute)
 
 	local executeButton = script.Parent
@@ -751,7 +780,6 @@ local function XXQJ_fake_script() -- execute.LocalScript
 		local code = _G.codeBox.Text
 	
 		if code == "" then
-	
 			debounce = false
 			return
 		end
@@ -766,42 +794,41 @@ local function XXQJ_fake_script() -- execute.LocalScript
 		else
 	
 		end
-	
 		debounce = false
 	end)
 end
-coroutine.wrap(XXQJ_fake_script)()
-local function UJIIKMW_fake_script() -- clear.LocalScript 
+coroutine.wrap(OHTYB_fake_script)()
+local function PVIZ_fake_script() -- clear.LocalScript 
 	local script = Instance.new('LocalScript', clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		_G.codeBox.Text = ""
 	end)
 end
-coroutine.wrap(UJIIKMW_fake_script)()
-local function AAQDJPB_fake_script() -- main.variable 
+coroutine.wrap(PVIZ_fake_script)()
+local function JCZN_fake_script() -- main.variable 
 	local script = Instance.new('LocalScript', main)
 
 	_G.codeBox = script.Parent.codeBox.EditorFrame.Source
 end
-coroutine.wrap(AAQDJPB_fake_script)()
-local function FTPT_fake_script() -- scripthub.LocalScript 
+coroutine.wrap(JCZN_fake_script)()
+local function TEVHYY_fake_script() -- scripthub.LocalScript 
 	local script = Instance.new('LocalScript', scripthub)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.scripthubf.Visible = true
 	end)
 end
-coroutine.wrap(FTPT_fake_script)()
-local function VBVK_fake_script() -- settings_2.LocalScript 
+coroutine.wrap(TEVHYY_fake_script)()
+local function YNLK_fake_script() -- settings_2.LocalScript 
 	local script = Instance.new('LocalScript', settings_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.settingsf.Visible = true
 	end)
 end
-coroutine.wrap(VBVK_fake_script)()
-local function UTYNIW_fake_script() -- close.LocalScript 
+coroutine.wrap(YNLK_fake_script)()
+local function OICWJ_fake_script() -- close.LocalScript 
 	local script = Instance.new('LocalScript', close)
 
 	local button = script.Parent
@@ -839,15 +866,15 @@ local function UTYNIW_fake_script() -- close.LocalScript
 	end)
 	
 end
-coroutine.wrap(UTYNIW_fake_script)()
-local function GFZJT_fake_script() -- settingsf.settingsManager 
+coroutine.wrap(OICWJ_fake_script)()
+local function PSCFV_fake_script() -- settingsf.settingsManager 
 	local script = Instance.new('LocalScript', settingsf)
 
 	local settingsFolder = script.Parent.Parent.Parent.settings
 	
 end
-coroutine.wrap(GFZJT_fake_script)()
-local function GJYT_fake_script() -- main.clip 
+coroutine.wrap(PSCFV_fake_script)()
+local function IZBUERJ_fake_script() -- main.clip 
 	local script = Instance.new('LocalScript', main)
 
 	local mainContent = {
@@ -855,92 +882,55 @@ local function GJYT_fake_script() -- main.clip
 		script.Parent.clear,
 		script.Parent.codeBox,
 		script.Parent.settings,
-		script.Parent.scripthub
+		script.Parent.scripthub,
+		script.Parent.resetC, -- Ensure this is correctly referenced
 	}
 	
 	local settingsFrame = script.Parent.settingsf
 	local scripthubframe = script.Parent.scripthubf
 	
-	function hideMainContent()
+	-- Function to hide all main content
+	local function hideMainContent()
 		for _,v in pairs(mainContent) do
 			v.Visible = false
 		end
 	end
 	
-	function showMainContent()
+	-- Function to show all main content
+	local function showMainContent()
 		for _,v in pairs(mainContent) do
 			v.Visible = true
 		end
 	end
 	
-	settingsFrame.Changed:Connect(function()
-		if settingsFrame.Visible == true then
+	-- Function to handle visibility based on frame state
+	local function updateVisibility()
+		local anyFrameVisible = settingsFrame.Visible or scripthubframe.Visible
+		if anyFrameVisible then
 			hideMainContent()
-		elseif settingsFrame.Visible == false then
+		else
 			showMainContent()
 		end
-	end)
-	
-	scripthubframe.Changed:Connect(function()
-		if scripthubframe.Visible == true then
-			hideMainContent()
-		elseif scripthubframe.Visible == false then
-			showMainContent()
-		end
-	end)
-end
-coroutine.wrap(GJYT_fake_script)()
-local function QLDF_fake_script() -- main.Dragify 
-	local script = Instance.new('LocalScript', main)
-
-	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
-		dragToggle = nil
-		dragSpeed = 0.15
-		dragInput = nil
-		dragStart = nil
-		dragPos = nil
-		function updateInput(input)
-			Delta = input.Position - dragStart
-			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
-		end
-		Frame.InputBegan:Connect(function(input)
-			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
-				dragToggle = true
-				dragStart = input.Position
-				startPos = Frame.Position
-				input.Changed:Connect(function()
-					if input.UserInputState == Enum.UserInputState.End then
-						dragToggle = false
-					end
-				end)
-			end
-		end)
-		Frame.InputChanged:Connect(function(input)
-			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-				dragInput = input
-			end
-		end)
-		game:GetService("UserInputService").InputChanged:Connect(function(input)
-			if input == dragInput and dragToggle then
-				updateInput(input)
-			end
-		end)
 	end
-	dragify(script.Parent)
+	
+	-- Connect the visibility update function to both frames
+	settingsFrame.Changed:Connect(updateVisibility)
+	scripthubframe.Changed:Connect(updateVisibility)
+	
+	-- Initial call to set the visibility state correctly on script start
+	updateVisibility()
 	
 end
-coroutine.wrap(QLDF_fake_script)()
-local function OIQQY_fake_script() -- IY.LocalScript 
+coroutine.wrap(IZBUERJ_fake_script)()
+local function OPKSI_fake_script() -- IY.LocalScript 
 	local script = Instance.new('LocalScript', IY)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(OIQQY_fake_script)()
-local function BZUSAO_fake_script() -- UNC.LocalScript 
+coroutine.wrap(OPKSI_fake_script)()
+local function OYNAQ_fake_script() -- UNC.LocalScript 
 	local script = Instance.new('LocalScript', UNC)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1817,4 +1807,100 @@ local function BZUSAO_fake_script() -- UNC.LocalScript
 		end)
 	end)
 end
-coroutine.wrap(BZUSAO_fake_script)()
+coroutine.wrap(OYNAQ_fake_script)()
+local function JXLILBI_fake_script() -- prizzlife.LocalScript 
+	local script = Instance.new('LocalScript', prizzlife)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		Execution_Runtime = tick()
+		PLadmin_Settings = {
+			DefaultPrefix = "?"; --The default prefix for pladmin
+			JoinNotify = false; --Notify when a player joins
+			AutoRespawn = true; --Automatically loadcharacter when dying
+			AntiVoid = true; --Automatically teleport up when falling into void
+			AntiTase = true; --Prevents you from being tased (100% no getconnections used because its absolute garbage)
+			AntiArrest = true; --Prevents you from being arrested (100% no getconnections used because its absolute garbage)
+			AntiShoot = true; --Kills player who tries to shoot you (Will be delayed if you have shitty ping, *COUGH* PLDT Users)
+			AntiPunch = true; --Instantly kill players who try to punch you
+			AntiFling = true; --Prevent exploiters from flinging you
+			AntiShield = true; --stop pay2win people and bypass their shields
+			AntiBring = true; --Prevent other exploiter(s) from bringing you
+			SilentAim = false; --Makes you shoot without missing a target
+			AutoGuns = false; --Automatically get all guns
+			OldItemMethod = false; --Use teleport for getting items (USE THIS IF PRISON LIFE PATCHES THE TABLE METHOD)
+			Fullbright = false; --Enable fullbrightness
+			WhitelistRanked = false; --Automatically whitelist ranked players (DO NOT USE WHEN RANKING ALL PLAYERS)
+			RankedNukeCmds = false; --Allow ranked players to use nuke commands (Very annoying)
+			RankedMultiCmd = true; --Allow ranked players to use the arguments: "all, and team", EX: ?kill all
+			RankedOutput = false; --Chat the output commands of ranked players
+			WhisperToRanked = true; --Use whisper for outputing commands for ranked players
+			Force_isMobile = false; --Force mobile action gui (Punch and crawl buttons) if executor is too shitty and detected as "emulator"
+		};wait()
+	
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
+	end)
+end
+coroutine.wrap(JXLILBI_fake_script)()
+local function BUSO_fake_script() -- resetC.LocalScript 
+	local script = Instance.new('LocalScript', resetC)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = game.Players.LocalPlayer
+		local character = player.Character
+		character:BreakJoints()
+		character:WaitForChild("Humanoid").Health = 0
+	end)
+end
+coroutine.wrap(BUSO_fake_script)()
+local function DFXSQD_fake_script() -- main.Dragify 
+	local script = Instance.new('LocalScript', main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(DFXSQD_fake_script)()
+local function QEUVCDE_fake_script() -- areoVolt.notification 
+	local script = Instance.new('LocalScript', areoVolt)
+
+	game:GetService("StarterGui"):SetCore("SendNotification",{
+		Title = "AreoVolt Loaded.",
+		Text = "Press INSERT To Open The UI.",
+		Duration = 4.5
+	})
+end
+coroutine.wrap(QEUVCDE_fake_script)()
