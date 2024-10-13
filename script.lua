@@ -58,7 +58,7 @@ local customKeybind = Instance.new("StringValue")
 areoVolt.Name = "areoVolt"
 areoVolt.Parent = game.CoreGui
 areoVolt.ResetOnSpawn = false
-areoVolt.IgnoreGuiInsent = true
+areoVolt.IgnoreGuiInset = true
 
 background.Name = "background"
 background.Parent = areoVolt
